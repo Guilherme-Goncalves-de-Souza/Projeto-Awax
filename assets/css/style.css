@@ -1,0 +1,1489 @@
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+
+  overflow-x: hidden;
+}
+
+/* MENU */
+
+header{
+  height: 100px;
+  background-color: black;
+
+  color: white;
+}
+
+.header{
+  max-width: 1140px;
+  height: 100px;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+}
+
+.logo{
+  width: 100px;
+}
+
+.menu-opener{
+  display: none;
+}
+
+.menu{
+  flex: 1;
+  
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header .logo img{
+  width: 80px;
+  height: 80px;
+}
+
+.menu ul, .menu li{
+  list-style: none;
+}
+
+.menu ul{
+  display: flex; 
+}
+
+.menu li a{
+  color: white;
+
+  text-transform: uppercase;
+  font-weight: 600;
+
+  text-decoration: none;
+  
+  /* Ou usa gap no .menu ul */
+  padding-left: 10px; 
+  padding-right: 10px;
+
+  height: 100px;
+  display: flex;
+  align-items: center;
+
+  border-bottom: 5px solid black; 
+  /* Para quando o hover for ativado o texto não subir  */
+}
+
+.menu li a:hover, .menu .active a{
+  border-bottom: 5px solid #B28756;
+}
+
+.menu li a:hover{
+  opacity: 0.8;
+}
+/* FIM MENU */
+
+
+/* BANNER */
+
+.banner{
+  height: calc(100vh - 100px);
+
+  background-color: #333;
+  background-image: url('../images/bg.jpg');
+  background-size: cover; /* Vai preencher TODO o espaço */
+  background-position: bottom; /* Prioriza a parte de BAIXO da imagem */
+
+  overflow: hidden;
+}
+
+/* Slide */
+
+.banner .sliders{
+  width: 1000vw;
+  height: 100%;
+}
+
+.banner .slide{
+  width: 100vw;
+  height: 100%;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.8);
+
+  margin-right: -4px;
+}
+
+.banner .slide:nth-child(3){
+  width: 101vw;
+}
+
+.banner .slidearea{
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  color: white;
+
+  flex-direction: column;
+}
+
+.banner h1{
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 50px;
+}
+
+.banner h1 span{
+  color: #B28756;
+}
+
+.banner h2{
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+/* Pontinhos do banner */
+
+.banner .sliders-pointers{
+  width: 100vw;
+  height: 20px;
+
+  /* Para ele passar por cima do banner e aparecer */
+  position: absolute;
+  margin-top: -50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.banner .pointer{
+  width: 15px;
+  height: 15px;
+  border: 2px solid #B28756;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.banner .pointer.active{
+  background-color: #B28756;
+}
+
+
+.button{
+  display: inline-block; /* Para mexer em padding, altura e mais. */
+
+  background-color: #B28756;
+  color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+
+  padding: 10px 30px;
+  margin-top: 30px;
+  border-radius: 20px;
+}
+
+
+.default{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+
+.default .section-title,
+.default .section-desc{
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.default .section-title{
+  font-size: 20px;
+}
+
+.default .section-desc{
+  font-size: 12px;
+  color: #CCC;
+  margin-top: 13px;
+  margin-bottom: 50px; /* ou 40 */
+}
+
+.default .section-body{
+  max-width: 1140px; /* Limita o conteúdo em sua largura */
+  margin: auto; /* Vai fazer ir para o meio. */
+}
+
+/* Colocar a cor do background baseado no nome da class */
+.default.light{
+  background-color: #F7F7F7;
+}
+
+.default.light .section-title,
+.default.light .section-body
+{
+  color: black;
+}
+
+.default.dark{
+  background-color: black;
+}
+
+.default.dark .section-title,
+.default.dark .section-body
+{
+  color: white;
+}
+
+
+
+/* CSS DE ÁREAS ESPECÍFICAS */
+
+/* About us */
+.section-aboutus{
+  display: flex;
+}
+
+.section-aboutus--left{
+  flex: 1;
+}
+
+.section-aboutus--left p{
+  font-size: 14px;
+  line-height: 25px;
+  font-weight: 600;
+}
+
+.section-aboutus--right{
+  width: 520px;
+  text-align: center;
+}
+
+.section-aboutus--right img{
+  width: 480px; /* Vai ter a largura disponivel */
+  box-shadow: 0px 5px 10px rgb(116, 116, 116);
+}
+
+/* FIM About us */
+
+
+/* Services */
+.section-services{
+  display: flex;
+}
+
+.section-service{
+  flex: 1; /* Todas do mesmo tamanho */
+  text-align: center; /* Para ficar no meio */
+  border-right: 1px solid #333;
+  padding: 15px;
+}
+
+.section-service:first-child{
+  border-left: 1px solid #333;
+}
+
+.section-service h4{
+  margin-top: 20px;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.section-service p{
+  margin-top: 10px;
+  font-size: 13px;
+  color: #999;
+}
+
+/* FIM Services */
+
+
+/* Projects */
+
+.section-projects{ /* Deixar no meio */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-projects--filters{
+  border: 1px solid #CCC;
+  background-color: #EEE;
+  border-radius: 30px;
+  display: inline-block; /* Pega a área especifica DELE MESMO */
+  padding: 0px 20px;
+}
+
+.section-projects--filters ul,
+.section-projects--filters li{
+  list-style: none;
+}
+
+.section-projects--filters li{
+  display: inline-block; /* 1 ao lado do outro */
+  padding: 10px;
+  text-transform: uppercase;
+  font-size: 13px;
+  border-left: 1px solid #CCC;
+  color: #555;
+
+  border-bottom: 3px solid #EEE;
+  cursor: pointer;
+}
+
+.section-projects--filters li:hover, 
+.section-projects--filters li.active{
+  border-bottom: 3px solid #B28756;
+}
+
+.section-projects--filters li:first-child{
+  border-left: 0;
+}
+
+
+.section-projects--photos{
+  width: 100vw; /* Se o monitor for pequeno ele pega toda essa área */
+  max-width: 1140px; /* Se o monitor for muito grande ele vai limitar a essa largura */
+
+  margin-top: 20px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.section-projects--photo{
+  width: 280px;
+}
+
+.section-projects--photoarea{
+  margin: 10px;
+  width: 260px;
+  height: 160px;
+}
+
+.section-projects--photoarea img{
+  /* Vão herdar de photoarea */
+  width: inherit;
+  height: inherit;
+}
+
+.section-projects--photoinfo{
+  position: absolute; /* Deixa em cima da foto */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Vão herdar de photoarea */
+  width: inherit;
+  height: inherit;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  color: white;
+}
+
+.section-projects--photoinfo h5{
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.section-projects--photoinfo p{
+  width: 75%;
+}
+
+.section-projects--photoarea:hover .section-projects--photoinfo{
+  display: flex;
+}
+
+/* FIM Projects */
+
+/* Our team*/
+
+.bg-team{
+  background-image: url("../images/bg.jpg");
+  background-size: cover;
+  background-position: center;
+
+  padding: 0;
+}
+
+.section-team-area{
+  background-color: rgba(0, 0, 0, 0.8);
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/* Slides */
+
+.section-team{
+  overflow: hidden;
+  max-width: 880px;
+  margin: auto;
+}
+
+.section-team .sliders{
+  width: 1000vw;
+  height: 100%;
+}
+
+.section-team .slide{
+  width: 280px;
+  height: 100%;
+  display: inline-block;
+  background-color: white;
+  margin-right: 20px;
+
+  min-height: 300px;
+}
+
+.section-team .slidearea{
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  color: black;
+
+  padding: 30px;
+}
+
+.section-team-area .sliders-pointers{
+  height: 20px;
+
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.section-team-area .pointer{
+  width: 15px;
+  height: 15px;
+  border: 2px solid #B28756;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.section-team-area .pointer.active{
+  background-color: #B28756;
+}
+/* Conteúdo de cada caixa*/
+
+.section-team--avatar{
+  width: 150px;
+  height: auto;
+}
+
+.section-team--name{
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 17px;
+  margin-top: 30px;
+}
+
+.section-team--role{
+  font-size: 14px;
+  color: #999;
+  margin-top: 5px;
+}
+
+.section-team--social{
+  display: flex;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.section-team--social a{
+  display: inline-flex; /* Para colocar tamanho e display flex ao mesmo tempo*/
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  background-color: #CCC;
+
+  border-radius: 13px;
+}
+
+.section-team--social a:hover{
+  background-color: #B28756;
+}
+
+/* FIM Our team */
+
+/* Happy clients */
+
+.section-client{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-client img:nth-child(1){
+  margin-top: 25px;
+}
+
+.section-client h1{
+  margin-top: 20px;
+}
+
+.section-client p:nth-child(3){
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.section-client img:nth-child(4){
+  margin-top: 30px;
+}
+
+.section-client p:nth-child(5){
+  margin-top: 10px;
+  width: 55%;
+  text-align: center;
+  line-height: 20px;
+}
+
+.section-client .sliders-pointers{
+  height: 20px;
+
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.section-client .pointer{
+  width: 15px;
+  height: 15px;
+  border: 2px solid #B28756;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.section-client .pointer.active{
+  background-color: #B28756;
+}
+
+/* FIM Happy clients */
+
+
+/* Empresas */
+
+.ads{
+  height: 140px;
+  gap: 70px;
+
+  border-top: 1px solid rgb(192, 192, 192);
+  border-bottom: 1px solid rgb(192, 192, 192);
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Fim Empresas */
+
+
+/* Price */
+
+.section-price{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+
+  width: 100vw;
+  max-width: 1140px;
+}
+
+.price{
+  background-color: white;
+  width: 250px;
+  height: 350px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.price h1, h4{
+  text-transform: uppercase;
+}
+
+.price h1{
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.price h4{
+  font-weight: 600;
+  font-size: 10px;
+  color: #999;
+}
+
+.price .section-title{
+  margin-top: 10px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.price p{
+   margin-top: 15px;
+   font-size: 12px;
+   line-height: 8px;
+   color: #555;
+}
+
+.price p::after{
+	content:"---";
+	display: flex;
+	margin-top: 5px; /* para ficar embaixo da div */
+  justify-content: center;
+  font-weight: bold;
+}
+
+.noafter::after{
+  display: none;
+}
+
+.price .button{
+  background-color: #333;
+}
+
+.price .button:hover{
+  background-color: #B28756;
+}
+
+/* Fim Price */
+
+
+/* Premium */
+
+.section-premium .conteudo{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.section-premium .line{
+  margin: auto;
+  margin-top: 20px;
+  width: 1000px;
+  height: 2px;
+  background-color: rgb(219, 219, 219);
+}
+
+.section-premium .conteudo .img{
+  display: flex;
+  justify-content: center;
+  flex: 1;
+
+  width: 320px;
+  height: 290px;
+  
+}
+
+.section-premium .conteudo .img img{
+  width: 320px;
+  height: 290px;
+ }
+
+.section-premium .conteudo .texts{
+  flex: 1;
+}
+
+.section-premium .conteudo .texts{
+  display: flex;
+  flex-direction: column;
+
+  gap: 30px;
+}
+
+.section-premium .conteudo .texts .img-and-text{
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+}
+
+.section-premium .img-and-text .feature h1{
+  text-transform: uppercase;
+}
+
+.section-premium .img-and-text .feature p{
+  width: 440px;
+  line-height: 25px;
+}
+
+.section-premium .sliders-pointers{
+  height: 20px;
+
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.section-premium .pointer{
+  width: 15px;
+  height: 15px;
+  border: 2px solid #B28756;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.section-premium .pointer.active{
+  background-color: #B28756;
+}
+
+.section-premium{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section-premium .button{
+  margin: auto;
+  margin-top: 40px;
+}
+
+/* FIM Premium */
+
+
+
+/* Some facts */
+
+.section-sfacts{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 100px;
+}
+
+.section-sfacts .item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-sfacts .item h1{
+  color: #B28756;
+  font-size: 40px;
+}
+
+.section-sfacts .item .line{
+  width: 20px;
+  height: 4px;
+  background-color: #555;
+
+  margin-top: 7px;
+}
+
+.section-sfacts .item h2{
+  text-transform: uppercase;
+  text-align: center;
+  width: 193px;
+  
+  margin-top: 7px;
+}
+
+.section-sfacts .item p{
+  color: #999;
+  text-align: center;
+  width: 195px;
+  margin-top: 7px;
+}
+
+.section-sfacts .item p{
+  color: #999;
+  text-align: center;
+  width: 195px;
+  margin-top: 7px;
+}
+
+.section-sfacts .item:nth-child(2) p, .item:nth-child(4) p{
+  margin-top: 32px;
+}
+
+/* FIM Some facts */
+
+
+/* Social media */
+
+.social-media{
+  display: flex;
+  flex-direction: row;
+
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+
+  gap: 50px;
+
+  border-bottom: 1px solid rgb(221, 221, 221);
+}
+
+.social-media .share, .media a{
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+}
+
+.social-media .share{
+  gap: 15px;
+}
+
+.social-media .share p{
+  text-transform: uppercase;
+}
+
+.social-media .media a{
+  text-decoration: none;
+  gap: 5px;
+}
+
+.social-media p{
+  color: #999;
+  font-weight: 600;
+}
+
+.social-media .media .img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+  border-radius: 99px;
+}
+
+.social-media .media .img.twitter{
+  background-color: #1d9bf0;
+}
+
+.social-media .media .img.linkedin{
+  background-color: #0a66c2;
+}
+
+.social-media .media .img.facebook{
+  background-color: #1877f2;
+}
+
+.social-media .media .img.googleplus{
+  background-color: #dd4d3f;
+}
+
+.social-media .media .img.pinterest{
+  background-color: #e60023;
+}
+
+/* FIM Social media */
+
+/* Contact us */
+
+.section-contactus{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-contactus form{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.section-contactus form input{
+  width: 500px;
+  padding-bottom: 10px;
+  background-color: #F7F7F7;
+  border-bottom: 2px solid rgb(184, 184, 184);
+}
+
+.section-contactus form input:focus{
+  outline: 0;
+}
+
+.section-contactus form input:hover{
+  opacity: 0.7;
+}
+
+.section-contactus form .juntos{
+  display: flex;
+  gap: 25px;
+}
+
+.section-contactus form .juntos input{
+  width: 237.5px;
+}
+
+.section-contactus form input:nth-child(3){
+  margin-top: 40px;
+}
+
+.section-contactus form input::placeholder{
+  text-transform: uppercase;
+  color: #999;
+}
+
+.section-contactus .button{
+  margin-top: 60px;
+}
+
+/* FIM Contact us */
+
+
+/* Área de mapa */
+
+.section-map{
+  background-image: url('../images/mapa.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 30px 0px;
+}
+
+.section-map--area{
+  width: 100vw;
+  max-width: 1140px;
+
+  margin: auto; /* Posiciona o map info no meio */
+}
+
+.section-map--info{
+  width: 50%;
+  padding: 30px;
+  background-color: white;
+  color: black;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.section-map--info-item{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  gap: 15px;
+
+  color: #555;
+}
+
+.section-map--info-item .img {
+  background-color: #999;
+  width: 30px;
+  height: 30px;
+  padding: 18px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 99px;
+}
+
+/* FIM Área de mapa */
+
+
+
+/* Rodapé */
+
+.fortop{
+  position: absolute;
+  background-color: #B28756;
+  width: 70px;
+  height: 70px;
+  border-radius: 99px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  bottom: -5640px;
+  left: 40px;
+}
+
+.fortop a{
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+}
+
+
+.footer-body{
+  max-width: 1140px;
+  margin: auto;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 90px;
+}
+
+.footer .medias{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer .medias .imgs{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.footer .medias .img{
+  background-color: #555;
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 99px;
+}
+
+.footer .medias .img:hover{
+  background-color: #B28756;
+}
+
+.footer .svg img{
+  width: 20px;
+  height: 20px;
+}
+
+.footer .copy{
+  color: white;
+}
+
+.footer .sobre{
+  width: 300px;
+  color: #999;
+  line-height: 21px;
+}
+
+.footer .subscribe{
+  width: 330px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: #555;
+  border-radius: 5px;
+  padding: 50px;
+  
+}
+
+.footer .subscribe input{
+  background-color: #555;
+  border-bottom: 2px solid white;
+
+  color: white;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.footer .subscribe input::placeholder{
+  color: #999;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.footer .subscribe input:focus{
+  outline: 0;
+}
+
+/* FIM Rodapé */
+
+
+/* Responsividade em TABLETS */
+@media(min-width: 450px) and (max-width: 800px){
+
+  .logo{
+    margin-left: 30px;
+  }
+
+  .menu-opener{
+    display: block;
+    width: 45px;
+    margin-right: 30px;
+  }
+
+  nav{
+    display: none;
+
+
+    position: absolute; /* Flutuar */
+    z-index: 99; /* Para realmente ficar em cima */
+
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 70vw;
+    height: calc(100vh - 100px); /* Os 100px é do menu */
+    top: 100px;
+    right: 0;
+  }
+
+  .menu ul{
+    flex-direction: column;
+  }
+
+  .menu li a{
+    font-weight: bold;
+    height: 80px;
+    font-size: 27px;
+    margin-left: 50px;
+    border: 0;
+  }
+
+  .menu li.active a{
+    border: 0;
+    color: #B28756;
+  }
+
+
+ /* Section aboutus */
+  .section-aboutus{
+    flex-direction: column;
+  }
+
+  .section-aboutus--left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+
+  .section-aboutus--right{
+    width: auto;
+  }
+
+
+ /* Section services */
+  .section-services{
+    flex-wrap: wrap;
+  }
+
+  .section-service{
+    min-width: 50%;
+    margin-bottom: 30px;
+  }
+
+  .section-service:first-child, .section-service:nth-child(3){
+    border-left: 0;
+  }
+
+
+  /* Section ourteam */
+  .section-team{
+    max-width: 580px;
+  }
+
+
+  /* ADS */
+  .ads{
+    gap: 32px;
+  }
+
+
+  /* Section premium */
+  .section-premium{
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .section-premium .line {
+    width: 640px;
+  } 
+
+  .section-premium .img-and-text .feature p {
+    width: 300px;
+}
+
+  /* Section some facts  */
+  .section-sfacts{
+    gap: 55px;
+  }
+
+  /* Section map */
+  .section-map--area {
+    margin-left: 30px;
+  }
+
+
+  /* Footer */
+  .footer-body {
+    flex-direction: column-reverse;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    
+    margin-top: -20px;
+  }
+
+  .footer-body .sobre {
+    order: -1;
+  }
+
+  .footer-body .medias .copy h3{
+    position: absolute;
+    margin-top: 238px;
+    margin-left: 82px;
+  }
+
+
+  .fortop {
+    margin-bottom: -1685px;
+    margin-left: 461px;
+  }
+  
+}
+/* FIM para TABLETS */
+
+
+/* Responsividade para Mobile */
+@media (max-width: 450px){
+
+  .logo{
+    margin-left: 30px;
+  }
+
+  .menu-opener{
+    display: block;
+    width: 45px;
+    margin-right: 30px;
+  }
+
+  nav{
+    display: none;
+
+
+    position: absolute; /* Flutuar */
+    z-index: 99; /* Para realmente ficar em cima */
+
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 70vw;
+    height: calc(100vh - 100px); /* Os 100px é do menu */
+    top: 100px;
+    right: 0;
+  }
+
+  .menu ul{
+    flex-direction: column;
+  }
+
+  .menu li a{
+    font-weight: bold;
+    height: 60px;
+    font-size: 20px;
+    margin-left: 30px;
+    border: 0;
+  }
+
+  .menu li.active a{
+    border: 0;
+    color: #B28756;
+  }
+
+  /* Section banner */
+  .banner h1{
+    font-size: 30px;
+  }
+
+  .banner h2{
+    font-size: 17px;
+  }
+
+
+  /* Section aboutus */
+  .section-aboutus{
+    flex-direction: column;
+  }
+
+  .section-aboutus--left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+
+  .section-aboutus--right{
+    width: auto;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  .section-aboutus--right img{
+    width: 100%;
+  }
+
+
+  /* Section services */
+  .section-services{
+    flex-wrap: wrap;
+  }
+
+  .section-service{
+    min-width: 100%;
+    margin-bottom: 30px;
+    border: 0;
+  }
+
+
+  /* Section Our projects */
+  .section-projects--filters{
+    margin-left: 30px;
+    margin-right: 30px;
+    text-align: center;
+  }
+
+  .section-projects--photo{
+    width: 320px;
+  }
+
+  .section-projects--photoarea{
+    width: 300px;
+    height: 190px;
+  }
+
+
+  /* Section ourteam */
+  .section-team{
+    max-width: 280px;
+  }
+
+
+  /* ADS */
+  .ads{
+    gap: 84px;
+  }
+
+
+  /* Section premium */
+  .section-premium .conteudo {
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .section-premium .conteudo .img img {
+    margin-left: 35px;
+  }
+
+  .section-premium{
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .section-premium .line {
+    width: 342px;
+  } 
+
+  .section-premium .img-and-text .feature p {
+    width: 300px;
+}
+
+  /* Section some facts  */
+  .section-sfacts{
+    gap: 55px;
+  }
+
+  /* Redes sociais */
+  .social-media {
+    height: 100px;
+  }
+
+  .social-media .share, .media a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .social-media {
+    gap: 24px;
+  }
+
+  /* Section Contact us */
+  .section-contactus form {
+    align-items: center;
+  }
+
+  .section-contactus form input{
+    width: 348px;
+  }
+
+  .section-contactus form .juntos{
+    display: contents;
+  }
+
+  .section-contactus form .juntos input{
+    width: 348px;
+  }
+
+  .section-contactus form input:nth-child(3) {
+    margin-top: 0px;
+  } 
+
+  /* Section map */
+  .section-map--info {
+    width: auto;
+    margin-top: -30px;
+  }
+
+  .section-map--area {
+    padding: 0;
+    padding-bottom: 250px;
+  }
+
+
+  /* Footer */
+  .footer-body {
+    flex-direction: column-reverse;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    
+    margin-top: -20px;
+  }
+
+  .footer-body .sobre {
+    order: -1;
+  }
+
+  .footer-body .medias .copy h3{
+    position: absolute;
+    margin-top: 238px;
+    margin-left: 82px;
+  }
+
+  .fortop {
+    margin-bottom: -339rem;
+    margin-left: 17rem;
+  }
+  
+}
+/* FIM */
